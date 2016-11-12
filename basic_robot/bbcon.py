@@ -1,5 +1,6 @@
 from arbitrator import Arbitrator
 
+
 class BBCON:
     def __init__(self, behaviors, sensobs, motobs, arbitrator):
         self.behaviors = behaviors

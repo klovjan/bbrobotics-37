@@ -1,5 +1,6 @@
 from motors import Motors
 
+
 class Motob():
     value = None
     motors = None
@@ -18,7 +19,7 @@ class Motob():
     #valid directions are: "forward", "backward"
     #valid speeds are  : [-1.0, 1.0]
     #valid durations are :  dur >= 0
-    def go_direction(self, dir = 'forward', dur = None, speed = 0):
+    def go_direction(self, dir='forward', dur=None, speed=0):
         try:
             eval('self.motors.' + dir)(speed, dur)
         except:
