@@ -1,4 +1,8 @@
-from reflectance_sensors import *
+from reflectance_sensors import ReflectanceSensors
+from ultrasonic import Ultrasonic
+from camera import Camera
+from irproximity_sensor import IRProximitySensor
+from zumo_button import ZumoButton
 
 
 class Sensob:
@@ -12,7 +16,7 @@ class Sensob:
         pass
 
 
-class ReflectanceOb(Sensob):
+class ReflectanceSensorsSensob(Sensob):
     def __init__(self, rs):  # Initializes the InfraredSensOb object to house the specified sensor.
         super().__init__(rs)
 
@@ -21,7 +25,7 @@ class ReflectanceOb(Sensob):
         return self.value
 
 
-class UltrasonicOb(Sensob):
+class UltrasonicSensob(Sensob):
     def __init__(self, us):
         super().__init__(us)
 
@@ -30,7 +34,7 @@ class UltrasonicOb(Sensob):
         return self.value
 
 
-class CameraOb(Sensob):
+class CameraSensob(Sensob):
     def __init__(self, sensor):
         super().__init__(sensor)
 
@@ -38,7 +42,15 @@ class CameraOb(Sensob):
         super()._calculate()
 
 
-class ButtonOb(Sensob):
+class IRProximitySensorSensob(Sensob):
+    def __init__(self, sensor):
+        super().__init__(sensor)
+
+    def _calculate(self):
+        super()._calculate()
+
+
+class ZumoButtonSensob(Sensob):
     def __init__(self, sensor):
         super().__init__(sensor)
 

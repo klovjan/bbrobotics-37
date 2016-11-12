@@ -1,8 +1,8 @@
 __author__ = 'keithd'
 import wiringpi2 as wp
 
-class ZumoButton():
 
+class ZumoButton:
     def __init__(self):
         wp.wiringPiSetupGpio()
         wp.pinMode(22, 0)
@@ -12,5 +12,4 @@ class ZumoButton():
         read_val = wp.digitalRead(22)
         while read_val:
             read_val = wp.digitalRead(22)
-        print("Button pressed!!")
-
+        print("Button pressed!")
