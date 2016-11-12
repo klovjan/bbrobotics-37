@@ -1,8 +1,9 @@
 from bbcon import BBCON
 
+
 class Arbitrator:
-    def __init__(self):
-        self.bbcon = None
+    def __init__(self, bbcon=BBCON()):
+        self.bbcon = bbcon
 
     def choose_action(self):
         behaviors = self.bbcon.active_behaviors

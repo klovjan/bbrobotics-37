@@ -30,7 +30,7 @@ class BBCON:
             sensob.update()
 
         for behavior in self.behaviors:  # Or in self.active_behaviors?
-            behavior.update()  # Must be run with sensob values as received through sensob.update() above
+            behavior.update()  # Must be run with sensob values as received through sensob.update() above. Unless these refer to the very same sensobs, which they do.
 
         motor_rec, halt_req = self.arbitrator.choose_action()
         for motob in self.motobs:
